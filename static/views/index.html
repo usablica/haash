@@ -1,0 +1,42 @@
+<section class="header">
+    <img class="haash-logo" src='/static/images/logo.png' />
+    <h5>Encrypt a text that you only you can see it (<a href="/about">how?</a>)</h5>
+</section>
+
+<form id="encrypt-form" method="post" ng-show="!result">
+    <textarea class="u-full-width" placeholder="This is a secret message…" ng-model="text" id="exampleMessage"></textarea>
+
+    <a ng-click="encrypt()" class="button button-primary" ng-disabled="loading">Encrypt it</a>
+</form>
+
+<div ng-show="result" class="haash-result">
+    <div class="haash-success">
+        <h6><b>Successful.</b> You can find your unique link below. </h6>
+        <a href="/{{result.id}}/{{result.key}}">haa.sh/{{result.id}}/{{result.key}}</a>
+    </div>
+
+    <a href="javascript:void(0)" ng-click="result = null" class="button">Start again</a>
+</div>
+
+<div class="navbar-spacer"></div>
+<nav class="navbar">
+    <div class="container">
+    <ul class="navbar-list">
+        <li class="navbar-item">
+            <a class="navbar-link" ng-class="{'active': location.path() == '/'}" href="/">Home</a>
+        </li>
+        <li class="navbar-item">
+            <a class="navbar-link" href="#intro">About</a>
+        </li>
+        <li class="navbar-item">
+            <a class="navbar-link" href="#intro">API</a>
+        </li>
+        <li class="navbar-item">
+        <a class="navbar-link" href="#" data-popover="#codeNavPopover">FAQ</a>
+        </li>
+        <li class="navbar-item">
+            <a class="navbar-link" href="#examples">Contact</a>
+        </li>
+    </ul>
+    </div>
+</nav>

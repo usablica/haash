@@ -1,0 +1,37 @@
+<section class="header">
+    <img class="haash-logo" src='/static/images/logo.png' />
+    <h5>Encrypt a text that you only you can see it (<a href="/about">how?</a>)</h5>
+</section>
+
+<div ng-show="result" class="haash-result">
+    <div class="haash-success">
+        <b>Successful.</b> You can find your text below.
+    </div>
+
+    <div class="haash-show-result">
+        {{result.text}}
+    </div>
+</div>
+
+<div class="navbar-spacer"></div>
+<nav class="navbar">
+    <div class="container">
+    <ul class="navbar-list">
+        <li class="navbar-item">
+            <a class="navbar-link" ng-class="{'active': location.path() == '/'}" href="/">Home</a>
+        </li>
+        <li class="navbar-item">
+            <a class="navbar-link" href="#intro">About</a>
+        </li>
+        <li class="navbar-item">
+            <a class="navbar-link" href="#intro">API</a>
+        </li>
+        <li class="navbar-item">
+        <a class="navbar-link" href="#" data-popover="#codeNavPopover">FAQ</a>
+        </li>
+        <li class="navbar-item">
+            <a class="navbar-link" href="#examples">Contact</a>
+        </li>
+    </ul>
+    </div>
+</nav>
